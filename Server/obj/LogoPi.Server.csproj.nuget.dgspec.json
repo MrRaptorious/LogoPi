@@ -117,9 +117,17 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "IoT.Device.Bindings": {
+              "target": "Package",
+              "version": "[1.0.0-*, )"
+            },
             "Microsoft.AspNetCore.Blazor.Server": {
               "target": "Package",
               "version": "[3.1.0-preview4.19579.2, )"
+            },
+            "System.Device.Gpio": {
+              "target": "Package",
+              "version": "[1.0.0-*, )"
             }
           },
           "imports": [
