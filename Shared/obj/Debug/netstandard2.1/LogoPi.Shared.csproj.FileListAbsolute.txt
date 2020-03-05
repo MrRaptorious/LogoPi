@@ -1,8 +1,0 @@
-/home/pi/src/LogoPi/Shared/bin/Debug/netstandard2.1/LogoPi.Shared.deps.json
-/home/pi/src/LogoPi/Shared/bin/Debug/netstandard2.1/LogoPi.Shared.dll
-/home/pi/src/LogoPi/Shared/bin/Debug/netstandard2.1/LogoPi.Shared.pdb
-/home/pi/src/LogoPi/Shared/obj/Debug/netstandard2.1/LogoPi.Shared.csprojAssemblyReference.cache
-/home/pi/src/LogoPi/Shared/obj/Debug/netstandard2.1/LogoPi.Shared.AssemblyInfoInputs.cache
-/home/pi/src/LogoPi/Shared/obj/Debug/netstandard2.1/LogoPi.Shared.AssemblyInfo.cs
-/home/pi/src/LogoPi/Shared/obj/Debug/netstandard2.1/LogoPi.Shared.dll
-/home/pi/src/LogoPi/Shared/obj/Debug/netstandard2.1/LogoPi.Shared.pdb
