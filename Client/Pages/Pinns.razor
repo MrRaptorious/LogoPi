@@ -1,0 +1,51 @@
+﻿@page "/pinns"
+@using LogoPi.Shared
+@inject HttpClient Http
+
+@if (pinns == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>State</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var pin in pinns)
+            {
+                string deleteBtnId = string.Join("delete_", pin.PinNumber);
+
+                <tr>
+                    <td>@pin.Name</td>
+                    <td><input id="Checkbox1" type="checkbox" value=@pin.State /></td>
+                    <td><button id=@deleteBtnId class="btn btn-primary" @onclick="@(() => DeletePin(pin))">Delete</button></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private IList<Pin> pinns;
+
+    protected override async Task OnInitializedAsync()
+    {
+        pinns = await Http.GetJsonAsync<IList<Pin>>("api/pin");
+    }
+
+    private async void DeletePin(Pin pin)
+    {
+        await Http.DeleteAsync($"api/pin/{pin.PinNumber}");
+
+        pinns.Remove(pin);
+
+        this.StateHasChanged();
+    }
+
+}
